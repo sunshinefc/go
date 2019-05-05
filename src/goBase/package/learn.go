@@ -1,5 +1,5 @@
 //单行注释 package main
-package main
+package _package
 
 import "fmt"
 
