@@ -1,15 +1,20 @@
 package main
 
-import "fmt"
-
-var a int
-var b int=456
-var (
-	c string ="历史"
-	d int =1994
+import (
+	"fmt"
+	"reflect"
 )
+
+
 func main()  {
-	a=123
+	var a,b,c  = 11,21.2,31
+	fmt.Print("a变量的类型为：")
+	fmt.Print(reflect.TypeOf(a))
+	fmt.Print("\n")
+
+	fmt.Print("b变量的类型为：")
+	fmt.Print(reflect.TypeOf(b))
+	fmt.Print("\n")
 
 	fmt.Print(a)
 	fmt.Print("\n")
@@ -18,7 +23,6 @@ func main()  {
 	fmt.Print("\n")
 
 	fmt.Print(c)
-	fmt.Print("\n")
 
-	fmt.Print(d)
+
 }
