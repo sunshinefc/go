@@ -1,33 +1,37 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+	"unsafe"
+)
 
+type 历史 int32
 func main()  {
-	var i int32
-	var j float32
-	var b bool
-	var d complex64
-	var s string
+	var i 历史
+	var j int32
 
-	fmt.Print("int32 默认值为：")
+	fmt.Print("i 的默认值")
 	fmt.Print(i)
 	fmt.Print("\n")
+	fmt.Print("i变量的数据类型为：")
+	fmt.Print(reflect.TypeOf(i))
+	fmt.Print("\n")
+	fmt.Print("历史别名占用空间大小为：")
+	fmt.Print(unsafe.Sizeof(i))
 
-	fmt.Print("float32 默认值为：")
+	fmt.Print("\n")
+	fmt.Print("----------------------------------")
+	fmt.Print("\n")
+
+	fmt.Print("j 的默认值")
 	fmt.Print(j)
 	fmt.Print("\n")
-
-	fmt.Print("bool 默认值为：")
-	fmt.Print(b)
+	fmt.Print("j变量的数据类型为：")
+	fmt.Print(reflect.TypeOf(j))
 	fmt.Print("\n")
-
-	fmt.Print("complex64 默认值为：")
-	fmt.Print(d)
-	fmt.Print("\n")
-
-	fmt.Print("字符串类型 默认值为：")
-	fmt.Print(s)
-	fmt.Print("\n")
+	fmt.Print("j占用空间大小为：")
+	fmt.Print(unsafe.Sizeof(j))
 
 
 }
