@@ -1,34 +1,33 @@
 package main
 
-import (
-	"fmt"
-	"unsafe"
-)
+import "fmt"
 
 func main()  {
-	//无符号整型
-	var a uint8 =1
+	var i int32
+	var j float32
+	var b bool
+	var d complex64
+	var s string
 
-	//整型
-	var b int32 =1
-	var c int =1
-	fmt.Print(unsafe.Sizeof(a))
-	fmt.Print(unsafe.Sizeof(b))
-	fmt.Print(unsafe.Sizeof(c))
+	fmt.Print("int32 默认值为：")
+	fmt.Print(i)
+	fmt.Print("\n")
 
-	//浮点型
-	var x float32=1.2
-	fmt.Print(unsafe.Sizeof(x))
+	fmt.Print("float32 默认值为：")
+	fmt.Print(j)
+	fmt.Print("\n")
 
-	//布尔
-	var t bool=true
-	fmt.Print(t)
+	fmt.Print("bool 默认值为：")
+	fmt.Print(b)
+	fmt.Print("\n")
 
-	//字节
-	var i byte=1
-	fmt.Print(unsafe.Sizeof(i))
+	fmt.Print("complex64 默认值为：")
+	fmt.Print(d)
+	fmt.Print("\n")
 
-	var j rune=1
-	fmt.Print(unsafe.Sizeof(j))
+	fmt.Print("字符串类型 默认值为：")
+	fmt.Print(s)
+	fmt.Print("\n")
+
 
 }
